@@ -1,4 +1,4 @@
-package dvdrental.sifat.dto;
+package dvdrental.sifat.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

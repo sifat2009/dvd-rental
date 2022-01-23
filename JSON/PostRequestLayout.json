@@ -1,0 +1,30 @@
+{
+        "filmName": "ACADEMY DINOSAUR",
+        "store": {
+                "address": {
+                        "address": "47 MySakila Drive",
+                        "address2": null,
+                        "district": "Alberta",
+                        "cityId": 300,
+                        "postalCode": "",
+                        "phone": ""
+                }
+        },
+        "customer": {
+                "firstName": "",
+                "lastName": "",
+                "email": "",
+                "address": {
+                        "address": "47 MySakila Drive",
+                        "address2": null,
+                        "district": "Alberta",
+                        "cityId": 300,
+                        "postalCode": "",
+                        "phone": ""
+                },
+                "isActive":true
+        },
+        "staff":{
+               "email" :"Mike.Hillyer@sakilastaff.com"
+        }
+}

@@ -1,4 +1,4 @@
-package dvdrental.sifat.dto;
+package dvdrental.sifat.domain.dto;
 
 public enum ResponseStatus {
     WARNING,

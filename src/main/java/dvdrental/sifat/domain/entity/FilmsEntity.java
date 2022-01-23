@@ -1,4 +1,4 @@
-package dvdrental.sifat.entity;
+package dvdrental.sifat.domain.entity;
 
 import lombok.Data;
 
@@ -12,9 +12,6 @@ public class FilmsEntity {
 
     @Column(name = "film_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "filmGenerator")
-    @SequenceGenerator(name = "filmGenerator", sequenceName = "film_film_id_seq",
-            initialValue = 1, allocationSize = 1)
     private Long filmId;
 
     @Column(name = "title")
@@ -30,7 +27,7 @@ public class FilmsEntity {
     private Long languageId;
 
     @Column(name = "original_language_id")
-    private String originalLanguageId;
+    private Long originalLanguageId;
 
     @Column(name = "rental_duration")
     private Long rentalDuration;
