@@ -4,5 +4,5 @@ import dvdrental.sifat.domain.entity.AddressesEntity;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AddressesRepository extends CrudRepository<AddressesEntity, Long> {
-    AddressesEntity findByAddress(String address);
+    AddressesEntity findByAddressIgnoreCase(String address);
 }

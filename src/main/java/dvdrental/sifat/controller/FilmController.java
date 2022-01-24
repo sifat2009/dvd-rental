@@ -1,5 +1,6 @@
 package dvdrental.sifat.controller;
 
+import dvdrental.sifat.domain.dto.FilmRequest;
 import dvdrental.sifat.domain.dto.Response;
 import dvdrental.sifat.domain.dto.ResponseStatus;
 import dvdrental.sifat.domain.entity.FilmsEntity;
@@ -10,10 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/dvd")
@@ -40,16 +38,10 @@ public class FilmController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     @PostMapping("/rent")
-    public ResponseEntity<?> submitRental() {
+    public ResponseEntity<?> submitRental(@RequestBody FilmRequest request) {
 
-        Iterable<FilmsEntity> allFilms = filmService.getAllFilms();
-        logger.info("Request was accepted for get all films");
-        Response<Iterable<FilmsEntity>> response = new Response<>();
-        logger.info("Empty response object is created");
-        response.setResponseStatus(ResponseStatus.SUCCESS);
-        logger.info("Response status is set");
-        response.setResult(allFilms);
-        logger.info("Request call result is set");
+        Response<?> response = filmService.rent(request);
+
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

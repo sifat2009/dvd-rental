@@ -1,30 +1,25 @@
 {
-        "filmName": "ACADEMY DINOSAUR",
+        "film": {
+                "filmName": "ACADEMY DINOSAUR"
+        },
         "store": {
-                "address": {
-                        "address": "47 MySakila Drive",
-                        "address2": null,
-                        "district": "Alberta",
-                        "cityId": 300,
-                        "postalCode": "",
-                        "phone": ""
-                }
+                "storeId": 2
+        },
+        "address": {
+                "address": "47 MySakila Drive",
+                "address2": "2ndFl",
+                "district": "Alberta",
+                "cityId": 300,
+                "postalCode": "11200",
+                "phone": "718888888"
         },
         "customer": {
-                "firstName": "",
-                "lastName": "",
-                "email": "",
-                "address": {
-                        "address": "47 MySakila Drive",
-                        "address2": null,
-                        "district": "Alberta",
-                        "cityId": 300,
-                        "postalCode": "",
-                        "phone": ""
-                },
-                "isActive":true
+                "firstName": "sifat",
+                "lastName": "aman",
+                "email": "nonsense@yahoo.com",
+                "activebool": true
         },
-        "staff":{
-               "email" :"Mike.Hillyer@sakilastaff.com"
+        "staff": {
+                "email": "Mike.Hillyer@sakilastaff.com"
         }
 }

@@ -10,5 +10,11 @@ public interface FilmService {
      * @return all information from films tables.
      */
     Iterable<FilmsEntity> getAllFilms();
+
+    /**
+     *
+     * @param rent is an object of type {@code FilmRequest}
+     * @return an object with response of {@code Response} object with any valid java type
+     */
     Response<?> rent(FilmRequest rent);
 }

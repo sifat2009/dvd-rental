@@ -1,4 +1,5 @@
 package dvdrental.sifat.domain.entity;
+
 import lombok.Data;
 
 import javax.persistence.*;
@@ -37,10 +38,10 @@ public class StaffEntity {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "last_updated")
-    private LocalDateTime lastUpdated;
+    @Column(name = "last_update")
+    private LocalDateTime lastUpdate;
 
     @Column(name = "picture")
-    private Byte [] picture;
+    private Byte[] picture;
 
 }

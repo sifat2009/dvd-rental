@@ -1,9 +1,10 @@
 package dvdrental.sifat.exception;
 
-public class DvdRentalException extends RuntimeException{
+public class DvdRentalException extends RuntimeException {
 
     public DvdRentalException() {
     }
+
     public DvdRentalException(String message) {
         super(message);
     }

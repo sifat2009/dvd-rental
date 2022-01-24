@@ -37,12 +37,4 @@ public class RentalController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-    @PostMapping("/rent")
-    public ResponseEntity<?> submitRental(@RequestBody FilmRequest request) {
-
-        Response<?> response = filmService.rent(request);
-
-
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
 }

@@ -6,4 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface StoresRepository extends CrudRepository<StoresEntity, Long> {
 
     StoresEntity findByStoreId(Long storeId);
+
+    StoresEntity findByAddressId(Long addressId);
 }

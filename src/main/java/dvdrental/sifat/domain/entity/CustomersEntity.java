@@ -13,8 +13,8 @@ public class CustomersEntity {
     @Column(name = "customer_id")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customerGenerator")
-    @SequenceGenerator(name = "customerGenerator", sequenceName = "customer_customer_id_seq", initialValue = 1, allocationSize = 1)
-    private Long addressId;
+    @SequenceGenerator(name = "customerGenerator", sequenceName = "customer_customer_id_seq", allocationSize = 1)
+    private Long customerId;
 
     @Column(name = "store_id")
     private Long storeId;
@@ -29,16 +29,16 @@ public class CustomersEntity {
     private String email;
 
     @Column(name = "address_id")
-    private Long address_id;
+    private Long addressId;
 
     @Column(name = "activebool")
     private Boolean activebool;
 
     @Column(name = "create_date")
-    private LocalDate create_date;
+    private LocalDate createDate;
 
     @Column(name = "last_update")
-    private LocalDateTime last_update;
+    private LocalDateTime lastUpdate;
 
     @Column(name = "active")
     private Integer active;

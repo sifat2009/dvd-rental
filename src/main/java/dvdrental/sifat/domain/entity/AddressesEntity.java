@@ -13,7 +13,7 @@ public class AddressesEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "addressGenerator")
     @SequenceGenerator(name = "addressGenerator", sequenceName = "address_address_id_seq",
-           allocationSize = 1)
+            allocationSize = 1)
     private Long addressId;
 
     @Column(name = "address")
