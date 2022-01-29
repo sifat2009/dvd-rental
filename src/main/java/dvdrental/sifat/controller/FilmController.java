@@ -38,9 +38,16 @@ public class FilmController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     @PostMapping("/rent")
-    public ResponseEntity<?> submitRental(@RequestBody RentRequest request) {
+    public ResponseEntity<?> RentDvd(@RequestBody RentRequest request) {
 
         Response<?> response = filmService.rentADvd(request);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+    @PostMapping("/rent")
+    public ResponseEntity<?> RetunDvd(@RequestBody RentRequest request) {
+
+        Response<?> response = filmService.returnADvd(request);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

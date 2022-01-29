@@ -17,4 +17,10 @@ public interface FilmService {
      * @return an object with response of {@code Response} object with any valid java type
      */
     Response<?> rentADvd(RentRequest rent);
+    /**
+     *
+     * @param rent is an object of type {@code ReturnRequest}
+     * @return an object with response of {@code Response} object with any valid java type
+     */
+    Response<?> returnADvd(RentRequest rent);
 }

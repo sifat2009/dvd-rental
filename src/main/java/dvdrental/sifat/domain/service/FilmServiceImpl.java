@@ -101,7 +101,7 @@ public class FilmServiceImpl implements FilmService {
                     customerEntity.setEmail(rent.getCustomer().getEmail());
                     customerEntity.setActivebool(rent.getCustomer().getIsActive());
                     customerEntity.setCreateDate(LocalDate.now());
-                    customerEntity.setActive(rent.getCustomer().getIsActive()? 1: 0);
+                    customerEntity.setActive(rent.getCustomer().getIsActive() ? 1 : 0);
                     customerEntity.setStoreId(storesEntity.getStoreId());
                     customerEntity.setAddressId(customerAddress.getAddressId());
                     customerEntity.setLastUpdate(LocalDateTime.now());
@@ -117,20 +117,20 @@ public class FilmServiceImpl implements FilmService {
                 customerEntity.setEmail(rent.getCustomer().getEmail());
                 customerEntity.setActivebool(rent.getCustomer().getIsActive());
                 customerEntity.setCreateDate(LocalDate.now());
-                customerEntity.setActive(rent.getCustomer().getIsActive()? 1: 0);
+                customerEntity.setActive(rent.getCustomer().getIsActive() ? 1 : 0);
                 customerEntity.setStoreId(storesEntity.getStoreId());
                 customerEntity.setAddressId(customerAddress.getAddressId());
                 customerEntity.setLastUpdate(LocalDateTime.now());
                 customerEntity = customersRepository.save(customerEntity);
                 logger.info("Customer was processed");
             }
-                InventoriesEntity inventoriesEntity = new InventoriesEntity();
-                inventoriesEntity.setInventoryId(inventoriesEntity.getInventoryId());
-                inventoriesEntity.setFilmId(filmsEntity.getFilmId());
-                inventoriesEntity.setStoreId(storesEntity.getStoreId());
-                inventoriesEntity.setLastUpdate(filmsEntity.getLastUpdate());
-                inventoriesEntity = inventoriesRepository.save(inventoriesEntity);
-                logger.info("Added new inventory");
+            InventoriesEntity inventoriesEntity = new InventoriesEntity();
+            inventoriesEntity.setInventoryId(inventoriesEntity.getInventoryId());
+            inventoriesEntity.setFilmId(filmsEntity.getFilmId());
+            inventoriesEntity.setStoreId(storesEntity.getStoreId());
+            inventoriesEntity.setLastUpdate(filmsEntity.getLastUpdate());
+            inventoriesEntity = inventoriesRepository.save(inventoriesEntity);
+            logger.info("Added new inventory");
             RentalsEntity rentalsEntity = new RentalsEntity();
             logger.info("Processing rental");
             rentalsEntity.setRentalDate(LocalDateTime.now());
@@ -156,5 +156,10 @@ public class FilmServiceImpl implements FilmService {
             return new Response<>(ResponseStatus.ERROR, "Unknown exception happened." +
                     "Please contact customer service!");
         }
+    }
+
+    @Override
+    public Response<?> returnADvd(RentRequest rent) {
+        return null;
     }
 }
