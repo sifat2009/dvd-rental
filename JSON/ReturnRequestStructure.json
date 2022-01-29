@@ -1,0 +1,13 @@
+{
+    "customer":{
+        "firstName":"",
+        "lastName":""
+    },
+    "film": {
+        "title": ""
+    },
+    "payment": {
+        "amount": 0.0
+    }
+    
+}
