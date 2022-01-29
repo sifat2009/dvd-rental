@@ -1,6 +1,6 @@
 package dvdrental.sifat.domain.service;
 
-import dvdrental.sifat.domain.dto.FilmRequest;
+import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.domain.dto.Response;
 import dvdrental.sifat.domain.entity.FilmsEntity;
 
@@ -13,8 +13,8 @@ public interface FilmService {
 
     /**
      *
-     * @param rent is an object of type {@code FilmRequest}
+     * @param rent is an object of type {@code RentRequest}
      * @return an object with response of {@code Response} object with any valid java type
      */
-    Response<?> rent(FilmRequest rent);
+    Response<?> rentADvd(RentRequest rent);
 }

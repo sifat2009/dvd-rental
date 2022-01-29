@@ -1,6 +1,6 @@
 package dvdrental.sifat.domain.service;
 
-import dvdrental.sifat.domain.dto.FilmRequest;
+import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.domain.dto.Response;
 import dvdrental.sifat.domain.dto.ResponseStatus;
 import dvdrental.sifat.domain.entity.*;
@@ -53,7 +53,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public Response<?> rent(FilmRequest rent) {
+    public Response<?> rentADvd(RentRequest rent) {
         try {
             rentalValidator.validateEntry(rent);
 
@@ -62,20 +62,21 @@ public class FilmServiceImpl implements FilmService {
             if (filmsEntity == null) {
                 throw new DvdRentalException("Film does not exist in the library");
             }
-
-            StoresEntity storesEntity = storesRepository.findByStoreId(rent.getStore().getStoreId());
+            AddressesEntity storeAddress = addressesRepository.findByAddressIgnoreCase
+                    (rent.getStore().getStoreAddress().getAddress());
+            StoresEntity storesEntity = storesRepository.findByAddressId(storeAddress.getAddressId());
             logger.info("Store is being processed.");
             if (storesEntity == null) {
                 throw new DvdRentalException("Store does not exist");
             }
 
-            StaffEntity staffEntity = staffRepository.findByEmailIgnoreCase(rent.getStaff().getEmail());
+            StaffEntity staffEntity = staffRepository.findByEmailIgnoreCase(rent.getStore().getStaff().getEmail());
             if (staffEntity == null) {
                 throw new DvdRentalException("Invalid staff email address.");
             }
             logger.info("Staff email is processed.");
             AddressesEntity customerAddress = addressesRepository.findByAddressIgnoreCase
-                    (rent.getAddress().getAddress());
+                    (rent.getCustomer().getCustomerAddress().getAddress());
             logger.info("Address is being processed");
             CustomersEntity customerEntity =
                     customersRepository.findByFirstNameAndLastNameIgnoreCase(rent.getCustomer()
@@ -84,12 +85,12 @@ public class FilmServiceImpl implements FilmService {
             if (customerAddress == null) {
                 if (customerEntity == null) {
                     customerAddress = new AddressesEntity();
-                    customerAddress.setAddress(rent.getAddress().getAddress());
-                    customerAddress.setAddress2(rent.getAddress().getAddress2());
-                    customerAddress.setDistrict(rent.getAddress().getDistrict());
-                    customerAddress.setCityId(rent.getAddress().getCityId());
-                    customerAddress.setPostalCode(rent.getAddress().getPostalCode());
-                    customerAddress.setPhone(rent.getAddress().getPhone());
+                    customerAddress.setAddress(rent.getCustomer().getCustomerAddress().getAddress());
+                    customerAddress.setAddress2(rent.getCustomer().getCustomerAddress().getAddress2());
+                    customerAddress.setDistrict(rent.getCustomer().getCustomerAddress().getDistrict());
+                    customerAddress.setCityId(rent.getCustomer().getCustomerAddress().getCityId());
+                    customerAddress.setPostalCode(rent.getCustomer().getCustomerAddress().getPostalCode());
+                    customerAddress.setPhone(rent.getCustomer().getCustomerAddress().getPhone());
                     customerAddress.setLastUpdate(LocalDateTime.now());
                     customerAddress = addressesRepository.save(customerAddress);
                     logger.info("Address table was updated.");
@@ -98,10 +99,10 @@ public class FilmServiceImpl implements FilmService {
                     customerEntity.setFirstName(rent.getCustomer().getFirstName());
                     customerEntity.setLastName(rent.getCustomer().getLastName());
                     customerEntity.setEmail(rent.getCustomer().getEmail());
-                    customerEntity.setActivebool(rent.getCustomer().getActivebool());
+                    customerEntity.setActivebool(rent.getCustomer().getIsActive());
                     customerEntity.setCreateDate(LocalDate.now());
-                    customerEntity.setActive(rent.getCustomer().getActive());
-                    customerEntity.setStoreId(rent.getStore().getStoreId());
+                    customerEntity.setActive(rent.getCustomer().getIsActive()? 1: 0);
+                    customerEntity.setStoreId(storesEntity.getStoreId());
                     customerEntity.setAddressId(customerAddress.getAddressId());
                     customerEntity.setLastUpdate(LocalDateTime.now());
                     customerEntity = customersRepository.save(customerEntity);
@@ -114,27 +115,22 @@ public class FilmServiceImpl implements FilmService {
                 customerEntity.setFirstName(rent.getCustomer().getFirstName());
                 customerEntity.setLastName(rent.getCustomer().getLastName());
                 customerEntity.setEmail(rent.getCustomer().getEmail());
-                customerEntity.setActivebool(rent.getCustomer().getActivebool());
+                customerEntity.setActivebool(rent.getCustomer().getIsActive());
                 customerEntity.setCreateDate(LocalDate.now());
-                customerEntity.setActive(rent.getCustomer().getActive());
-                customerEntity.setStoreId(rent.getStore().getStoreId());
+                customerEntity.setActive(rent.getCustomer().getIsActive()? 1: 0);
+                customerEntity.setStoreId(storesEntity.getStoreId());
                 customerEntity.setAddressId(customerAddress.getAddressId());
                 customerEntity.setLastUpdate(LocalDateTime.now());
                 customerEntity = customersRepository.save(customerEntity);
                 logger.info("Customer was processed");
             }
-            InventoriesEntity inventoriesEntity = inventoriesRepository
-                    .findByLastUpdate(rent.getFilm().getLastUpdate());
-            logger.info("Inventory of film is being processed.");
-            if (inventoriesEntity == null) {
-                inventoriesEntity = new InventoriesEntity();
+                InventoriesEntity inventoriesEntity = new InventoriesEntity();
                 inventoriesEntity.setInventoryId(inventoriesEntity.getInventoryId());
                 inventoriesEntity.setFilmId(filmsEntity.getFilmId());
                 inventoriesEntity.setStoreId(storesEntity.getStoreId());
                 inventoriesEntity.setLastUpdate(filmsEntity.getLastUpdate());
                 inventoriesEntity = inventoriesRepository.save(inventoriesEntity);
                 logger.info("Added new inventory");
-            }
             RentalsEntity rentalsEntity = new RentalsEntity();
             logger.info("Processing rental");
             rentalsEntity.setRentalDate(LocalDateTime.now());
@@ -144,6 +140,7 @@ public class FilmServiceImpl implements FilmService {
             rentalsEntity.setStaffId(staffEntity.getStaffId());
             rentalsEntity.setLastUpdate(LocalDateTime.now());
             rentalsEntity = rentalsRepository.save(rentalsEntity);
+            logger.info("Rental was processed");
 
             return new Response<>(ResponseStatus.SUCCESS, customerEntity);
 

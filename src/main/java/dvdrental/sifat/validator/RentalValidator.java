@@ -1,6 +1,6 @@
 package dvdrental.sifat.validator;
 
-import dvdrental.sifat.domain.dto.FilmRequest;
+import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.exception.DvdRentalException;
 import org.springframework.stereotype.Component;
 
@@ -13,31 +13,32 @@ public class RentalValidator {
         return false;
     }
 
-    public void validateEntry(FilmRequest rent) {
+    public void validateEntry(RentRequest rent) {
         if (rent.getFilm() == null
                 || isNullOrEmpty(rent.getFilm().getTitle())) {
             throw new DvdRentalException("Film title is required");
         }
         if (rent.getStore() == null
-                || rent.getStore().getStoreId() == null) {
-            throw new DvdRentalException("Store id is required");
+                ||  isNullOrEmpty(rent.getStore().getStoreAddress().getAddress())
+                || isNullOrEmpty(rent.getStore().getStoreAddress().getCityId().toString())) {
+            throw new DvdRentalException("Store address is required");
         }
-        if (rent.getAddress() == null ||
-                isNullOrEmpty(rent.getAddress().getAddress())
-                || isNullOrEmpty(rent.getAddress().getDistrict())
-                || rent.getAddress().getCityId() == null
-                || isNullOrEmpty(rent.getAddress().getPhone())) {
+        if (rent.getCustomer().getCustomerAddress() == null ||
+                isNullOrEmpty(rent.getCustomer().getCustomerAddress().getAddress())
+                || isNullOrEmpty(rent.getCustomer().getCustomerAddress().getDistrict())
+                || rent.getCustomer().getCustomerAddress().getCityId() == null
+                || isNullOrEmpty(rent.getCustomer().getCustomerAddress().getPhone())) {
             throw new DvdRentalException("Full address and information " +
                     "must include" + " House #, district, city id, phone #");
         }
         if (rent.getCustomer() == null
                 || isNullOrEmpty(rent.getCustomer().getFirstName())
                 || isNullOrEmpty(rent.getCustomer().getLastName())
-                || isNullOrEmpty(rent.getCustomer().getActivebool().toString())) {
+                || isNullOrEmpty(rent.getCustomer().getIsActive().toString())) {
             throw new DvdRentalException("First name, Last name, and active field" +
                     " are required to be filled.");
         }
-        if (rent.getStaff() == null
+        if (rent.getStore().getStaff() == null
                 || isNullOrEmpty(rent.getCustomer().getEmail())) {
             throw new DvdRentalException("Staff email is required.");
         }

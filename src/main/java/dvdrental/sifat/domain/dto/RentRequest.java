@@ -8,10 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class FilmRequest {
+public class RentRequest {
     private FilmsEntity film;
-    private StoresEntity store;
-    private StaffEntity staff;
-    private AddressesEntity address;
-    private CustomersEntity customer;
+    private StoreInfo store;
+    private CustomerInfo customer;
 }

@@ -1,0 +1,28 @@
+{     
+    "customer": {
+        "firstName":"",
+        "lastName":"",
+        "email":"",
+        "customerAddress":{
+            "address":"",
+            "cityId":0,
+            "district":"",
+            "postal":"",
+            "phone":""
+        },
+        "isActive":true
+    },
+    "film":{
+        "title":""
+    },
+    "store": {
+        "staff": {
+            "email":""
+        },
+        "storeAddress": {
+            "address":"",
+            "cityId":0
+        }
+    }
+
+}

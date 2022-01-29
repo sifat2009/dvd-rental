@@ -1,0 +1,14 @@
+SELECT * FROM address;
+SELECT DISTINCT(address) FROM address;
+SELECT COUNT(address_id) AS numOfAddress FROM address;
+SELECT DISTINCT COUNT(address2) FROM address;
+SELECT * FROM film;
+SELECT * FROM store;
+SELECT * FROM staff;
+SELECT * FROM customer;
+SELECT * FROM RENTAL;
+SELECT COUNT(rental_id) FROM rental;
+SELECT * FROM inventory;
+SELECT COUNT(inventory_id) FROM inventory;
+SELECT COUNT (email) as num_of_email from customer;
+SELECT DISTINCT COUNT(email) as num_of_email FROM customer;
