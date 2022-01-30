@@ -4,22 +4,18 @@ import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.exception.DvdRentalException;
 import org.springframework.stereotype.Component;
 
+import static dvdrental.sifat.validator.CheckNullOrEmpty.isNullOrEmpty;
+
 @Component
 public class RentalValidator {
-    private static boolean isNullOrEmpty(String value) {
-        if (value == null || value.isEmpty()) {
-            return true;
-        }
-        return false;
-    }
 
-    public void validateEntry(RentRequest rent) {
+    public void validateRental(RentRequest rent) {
         if (rent.getFilm() == null
                 || isNullOrEmpty(rent.getFilm().getTitle())) {
             throw new DvdRentalException("Film title is required");
         }
         if (rent.getStore() == null
-                ||  isNullOrEmpty(rent.getStore().getStoreAddress().getAddress())
+                || isNullOrEmpty(rent.getStore().getStoreAddress().getAddress())
                 || isNullOrEmpty(rent.getStore().getStoreAddress().getCityId().toString())) {
             throw new DvdRentalException("Store address is required");
         }

@@ -3,13 +3,16 @@ package dvdrental.sifat.domain.service;
 import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.domain.dto.Response;
 import dvdrental.sifat.domain.dto.ResponseStatus;
+import dvdrental.sifat.domain.dto.ReturnRequest;
 import dvdrental.sifat.domain.entity.*;
 import dvdrental.sifat.domain.repository.*;
 import dvdrental.sifat.exception.DvdRentalException;
 import dvdrental.sifat.validator.RentalValidator;
+import dvdrental.sifat.validator.ReturnValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -43,6 +46,12 @@ public class FilmServiceImpl implements FilmService {
     @Autowired
     private RentalValidator rentalValidator;
 
+    @Autowired
+    private ReturnValidator returnValidator;
+
+    @Autowired
+    private PaymentsRepository paymentsRepository;
+
     @Override
     public Iterable<FilmsEntity> getAllFilms() {
 
@@ -55,29 +64,37 @@ public class FilmServiceImpl implements FilmService {
     @Override
     public Response<?> rentADvd(RentRequest rent) {
         try {
-            rentalValidator.validateEntry(rent);
+
+            rentalValidator.validateRental(rent);
 
             FilmsEntity filmsEntity = filmsRepository.findByTitleIgnoreCase(rent.getFilm().getTitle());
             logger.info("Film title is processed.");
+
             if (filmsEntity == null) {
                 throw new DvdRentalException("Film does not exist in the library");
             }
+
             AddressesEntity storeAddress = addressesRepository.findByAddressIgnoreCase
                     (rent.getStore().getStoreAddress().getAddress());
+
             StoresEntity storesEntity = storesRepository.findByAddressId(storeAddress.getAddressId());
             logger.info("Store is being processed.");
+
             if (storesEntity == null) {
                 throw new DvdRentalException("Store does not exist");
             }
 
             StaffEntity staffEntity = staffRepository.findByEmailIgnoreCase(rent.getStore().getStaff().getEmail());
+
             if (staffEntity == null) {
                 throw new DvdRentalException("Invalid staff email address.");
             }
             logger.info("Staff email is processed.");
+
             AddressesEntity customerAddress = addressesRepository.findByAddressIgnoreCase
                     (rent.getCustomer().getCustomerAddress().getAddress());
             logger.info("Address is being processed");
+
             CustomersEntity customerEntity =
                     customersRepository.findByFirstNameAndLastNameIgnoreCase(rent.getCustomer()
                             .getFirstName(), rent.getCustomer().getLastName());
@@ -124,11 +141,12 @@ public class FilmServiceImpl implements FilmService {
                 customerEntity = customersRepository.save(customerEntity);
                 logger.info("Customer was processed");
             }
+            logger.info("Customer table was updated.");
+
             InventoriesEntity inventoriesEntity = new InventoriesEntity();
-            inventoriesEntity.setInventoryId(inventoriesEntity.getInventoryId());
             inventoriesEntity.setFilmId(filmsEntity.getFilmId());
             inventoriesEntity.setStoreId(storesEntity.getStoreId());
-            inventoriesEntity.setLastUpdate(filmsEntity.getLastUpdate());
+            inventoriesEntity.setLastUpdate(LocalDateTime.now());
             inventoriesEntity = inventoriesRepository.save(inventoriesEntity);
             logger.info("Added new inventory");
             RentalsEntity rentalsEntity = new RentalsEntity();
@@ -159,7 +177,71 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public Response<?> returnADvd(RentRequest rent) {
-        return null;
+    public Response<?> returnADvd(ReturnRequest returnRequest) {
+
+        try {
+            returnValidator.validateReturn(returnRequest);
+            FilmsEntity filmsEntity = filmsRepository
+                    .findByTitleIgnoreCase(returnRequest.getFilm().getTitle());
+            logger.info("Film is being processed.");
+
+            if (filmsEntity == null) {
+                throw new DvdRentalException(" Please enter a valid film title");
+            }
+            logger.info("Film table was processed.");
+            CustomersEntity customer = customersRepository
+                    .findByFirstNameAndLastNameIgnoreCase
+                            (returnRequest.getCustomer().getFirstName()
+                                    , returnRequest.getCustomer().getLastName());
+            logger.info("Customer is being processed.");
+
+            if (customer == null) {
+                throw new DvdRentalException(" Please provide valid name.");
+            }
+            logger.info("Customer was found.");
+
+            InventoriesEntity inventoriesEntity = inventoriesRepository
+                    .findByFilmIdAndLastUpdateContaining(filmsEntity.getFilmId(),
+                            customer.getLastUpdate());
+            logger.info("Inventory is being processed.");
+
+            if (inventoriesEntity == null) {
+                throw new DvdRentalException(" Please contact customer service.");
+            }
+            logger.info("Inventory was found.");
+
+            RentalsEntity rentalsEntity = rentalsRepository
+                    .findByInventoryId(inventoriesEntity.getInventoryId());
+            logger.info("Rental is being processed.");
+
+            if (rentalsEntity == null) {
+                throw new DvdRentalException("Please contact customer service.");
+            }
+
+            PaymentsEntities paymentsEntities = new PaymentsEntities();
+            paymentsEntities.setCustomerId(customer.getCustomerId());
+            paymentsEntities.setStaffId(rentalsEntity.getStaffId());
+            paymentsEntities.setPaymentDate(LocalDateTime.now());
+            paymentsEntities.setRentalId(rentalsEntity.getRentalId());
+            paymentsEntities.setAmount(returnRequest.getPayment().getAmount());
+            paymentsEntities = paymentsRepository.save(paymentsEntities);
+
+            rentalsEntity.setReturnDate(LocalDateTime.now());
+            rentalsEntity = rentalsRepository.save(rentalsEntity);
+
+            return new Response<>(ResponseStatus.SUCCESS, returnRequest);
+
+        } catch (DvdRentalException e) {
+            logger.error("Fatal Exception", e);
+
+            return new Response<>(ResponseStatus.ERROR, e.getMessage());
+
+        } catch (Exception e) {
+            logger.error("Fatal Exception", e);
+            return new Response<>(ResponseStatus.ERROR, "Unknown exception happened." +
+                    "Please contact customer service!");
+        }
     }
 }
+
+

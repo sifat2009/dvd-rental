@@ -14,7 +14,7 @@ public class StoresEntity {
     private Long storeId;
 
     @Column(name = "manager_staff_id")
-    private Long address;
+    private Long managerStaffId;
 
     @Column(name = "address_id")
     private Long addressId;

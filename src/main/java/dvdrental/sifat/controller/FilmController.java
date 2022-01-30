@@ -3,6 +3,7 @@ package dvdrental.sifat.controller;
 import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.domain.dto.Response;
 import dvdrental.sifat.domain.dto.ResponseStatus;
+import dvdrental.sifat.domain.dto.ReturnRequest;
 import dvdrental.sifat.domain.entity.FilmsEntity;
 import dvdrental.sifat.domain.service.FilmService;
 import lombok.extern.slf4j.Slf4j;
@@ -44,8 +45,8 @@ public class FilmController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-    @PostMapping("/rent")
-    public ResponseEntity<?> RetunDvd(@RequestBody RentRequest request) {
+    @PostMapping("/return")
+    public ResponseEntity<?> ReturnDvd(@RequestBody ReturnRequest request) {
 
         Response<?> response = filmService.returnADvd(request);
 

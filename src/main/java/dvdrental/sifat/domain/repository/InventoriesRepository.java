@@ -7,4 +7,5 @@ import java.time.LocalDateTime;
 
 public interface InventoriesRepository extends CrudRepository<InventoriesEntity, Long> {
     InventoriesEntity findByLastUpdate(LocalDateTime lastUpdate);
+    InventoriesEntity findByFilmIdAndLastUpdateContaining(Long filmId, LocalDateTime lastUpdate);
 }
