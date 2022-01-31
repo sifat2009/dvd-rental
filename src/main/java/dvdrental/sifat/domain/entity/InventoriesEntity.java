@@ -1,5 +1,6 @@
 package dvdrental.sifat.domain.entity;
 
+import javafx.util.converter.LocalDateTimeStringConverter;
 import lombok.Data;
 
 
@@ -13,7 +14,7 @@ public class InventoriesEntity {
     @Column(name = "inventory_id")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "inventoryGenerator")
-    @SequenceGenerator(name = "inventoryGenerator", sequenceName = "inventory_inventory_id_seq", initialValue = 1,
+    @SequenceGenerator(name = "inventoryGenerator", sequenceName = "inventory_inventory_id_seq",
             allocationSize = 1)
     private Long inventoryId;
     @Column(name = "film_id")

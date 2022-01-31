@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 public class ReturnRequest {
     private FilmsEntity film;
     private CustomersEntity customer;
-    private PaymentsEntities payment;
+    private Double payment;
 }

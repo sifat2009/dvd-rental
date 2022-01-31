@@ -159,7 +159,8 @@ public class FilmServiceImpl implements FilmService {
             rentalsEntity.setLastUpdate(LocalDateTime.now());
             rentalsEntity = rentalsRepository.save(rentalsEntity);
             logger.info("Rental was processed");
-
+            filmsEntity.setLastUpdate(LocalDateTime.now());
+            filmsEntity = filmsRepository.save(filmsEntity);
             return new Response<>(ResponseStatus.SUCCESS, customerEntity);
 
         } catch (DvdRentalException e) {
@@ -201,8 +202,8 @@ public class FilmServiceImpl implements FilmService {
             logger.info("Customer was found.");
 
             InventoriesEntity inventoriesEntity = inventoriesRepository
-                    .findByFilmIdAndLastUpdateContaining(filmsEntity.getFilmId(),
-                            customer.getLastUpdate());
+                    .findByFilmIdAndLastUpdateBetween(filmsEntity.getFilmId(),
+                            customer.getLastUpdate(),filmsEntity.getLastUpdate());
             logger.info("Inventory is being processed.");
 
             if (inventoriesEntity == null) {
@@ -221,9 +222,10 @@ public class FilmServiceImpl implements FilmService {
             PaymentsEntities paymentsEntities = new PaymentsEntities();
             paymentsEntities.setCustomerId(customer.getCustomerId());
             paymentsEntities.setStaffId(rentalsEntity.getStaffId());
-            paymentsEntities.setPaymentDate(LocalDateTime.now());
             paymentsEntities.setRentalId(rentalsEntity.getRentalId());
-            paymentsEntities.setAmount(returnRequest.getPayment().getAmount());
+            paymentsEntities.setAmount(returnRequest.getPayment());
+            logger.info("Payment is processing.");
+            paymentsEntities.setPaymentDate(LocalDateTime.now());
             paymentsEntities = paymentsRepository.save(paymentsEntities);
 
             rentalsEntity.setReturnDate(LocalDateTime.now());

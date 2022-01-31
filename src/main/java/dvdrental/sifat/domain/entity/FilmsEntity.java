@@ -1,6 +1,7 @@
 package dvdrental.sifat.domain.entity;
 
 import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @Table(name = "film")
+@DynamicUpdate
 public class FilmsEntity {
 
     @Column(name = "film_id")
