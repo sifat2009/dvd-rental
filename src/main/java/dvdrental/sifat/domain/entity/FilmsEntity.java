@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @Table(name = "film")
-@DynamicUpdate
 public class FilmsEntity {
 
     @Column(name = "film_id")

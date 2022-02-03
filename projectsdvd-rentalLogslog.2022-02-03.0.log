@@ -1,0 +1,784 @@
+00:41:13.093 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 21336 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:41:13.097 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:41:14.353 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:41:14.430 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 8 JPA repository interfaces.
+00:41:15.395 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:41:15.407 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:41:15.408 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:41:15.408 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:41:15.494 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:41:15.494 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2338 ms
+00:41:15.923 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:41:16.198 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:41:16.263 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:41:16.359 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:41:16.623 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:41:16.819 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:41:17.535 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:41:17.547 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:41:18.380 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:41:19.521 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:41:19.545 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:41:19.570 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:41:19.583 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.998 seconds (JVM running for 7.395)
+00:41:29.789 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+00:41:29.791 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:41:29.798 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:41:33.318 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 5396 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:41:33.321 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:41:34.336 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:41:34.417 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 8 JPA repository interfaces.
+00:41:35.316 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:41:35.326 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:41:35.326 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:41:35.327 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:41:35.419 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:41:35.419 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2048 ms
+00:41:35.853 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:41:36.043 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:41:36.100 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:41:36.158 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:41:36.375 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:41:36.522 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:41:37.186 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:41:37.198 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:41:37.940 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:41:38.941 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:41:38.968 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:41:38.993 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:41:39.010 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.186 seconds (JVM running for 6.605)
+00:41:41.570 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:41:41.571 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+00:41:41.573 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+00:41:41.909 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:41:41.909 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:41:41.921 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:41:41.921 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:41:41.934 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:41:41.934 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:43:06.483 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+00:43:06.485 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:43:06.489 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:43:11.050 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 7632 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:43:11.053 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:43:12.165 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:43:12.263 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 8 JPA repository interfaces.
+00:43:13.186 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:43:13.195 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:43:13.196 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:43:13.196 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:43:13.288 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:43:13.289 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2171 ms
+00:43:13.723 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:43:13.909 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:43:13.979 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:43:14.038 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:43:14.265 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:43:14.401 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:43:15.100 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:43:15.110 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:43:15.713 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:43:16.733 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:43:16.757 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:43:16.779 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:43:16.792 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.293 seconds (JVM running for 6.782)
+00:44:37.032 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:44:37.032 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+00:44:37.034 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+00:44:37.332 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:44:37.332 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:44:37.343 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:44:37.343 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:44:37.352 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:44:37.352 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:46:09.679 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+00:46:09.681 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:46:09.687 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:46:13.697 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 13464 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:46:13.702 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:46:14.730 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:46:14.819 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 8 JPA repository interfaces.
+00:46:15.750 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:46:15.761 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:46:15.761 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:46:15.762 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:46:15.861 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:46:15.861 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2099 ms
+00:46:16.314 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:46:16.521 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:46:16.576 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:46:16.633 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:46:16.868 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:46:17.025 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:46:17.772 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:46:17.783 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:46:18.540 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:46:19.617 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:46:19.643 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:46:19.666 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:46:19.680 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.693 seconds (JVM running for 7.822)
+00:46:38.814 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:46:38.814 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+00:46:38.817 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+00:46:39.174 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:46:39.174 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:46:39.185 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:46:39.185 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:46:39.195 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:46:39.195 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:46:56.576 [http-nio-8080-exec-4] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:46:56.576 [http-nio-8080-exec-4] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:46:56.581 [http-nio-8080-exec-4] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:46:56.581 [http-nio-8080-exec-4] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:46:56.588 [http-nio-8080-exec-4] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:46:56.588 [http-nio-8080-exec-4] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:46:56.863 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+00:46:56.865 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:46:56.874 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:46:59.394 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 13236 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:46:59.398 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:47:00.564 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:47:00.678 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 8 JPA repository interfaces.
+00:47:01.667 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:47:01.679 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:47:01.679 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:47:01.680 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:47:01.770 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:47:01.770 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2300 ms
+00:47:02.238 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:47:02.443 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:47:02.500 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:47:02.557 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:47:02.811 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:47:02.968 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:47:03.693 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:47:03.704 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:47:04.439 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:47:05.688 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:47:05.723 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:47:05.753 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:47:05.771 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.99 seconds (JVM running for 7.494)
+00:47:06.739 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:47:06.740 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+00:47:06.741 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+00:47:07.123 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:47:07.124 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:47:07.134 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:47:07.135 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:47:07.145 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:47:07.145 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:47:51.887 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s913ms616µs100ns).
+00:48:14.477 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+00:48:14.480 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:48:14.489 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:48:17.241 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 20552 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:48:17.245 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:48:18.459 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:48:18.548 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+00:48:19.495 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:48:19.505 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:48:19.506 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:48:19.506 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:48:19.588 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:48:19.588 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2263 ms
+00:48:20.035 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:48:20.238 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:48:20.295 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:48:20.367 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:48:20.627 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:48:20.790 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:48:21.546 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:48:21.558 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:48:22.323 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:48:23.457 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:48:23.486 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:48:23.513 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:48:23.531 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.951 seconds (JVM running for 7.586)
+00:48:26.305 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:48:26.305 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+00:48:26.307 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+00:48:26.676 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:48:26.676 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:48:26.686 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:48:26.686 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:48:26.697 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:48:26.697 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:49:44.352 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s767ms814µs300ns).
+00:52:28.528 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s826ms297µs300ns).
+00:52:28.831 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+00:52:28.833 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:52:28.842 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:52:33.938 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 12484 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:52:33.940 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:52:34.972 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:52:35.053 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 8 JPA repository interfaces.
+00:52:35.968 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:52:35.978 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:52:35.978 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:52:35.978 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:52:36.060 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:52:36.060 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2071 ms
+00:52:36.466 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:52:36.646 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:52:36.699 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:52:36.784 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:52:37.064 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:52:37.195 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:52:37.849 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:52:37.863 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:52:38.598 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:52:39.663 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:52:39.688 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:52:39.711 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:52:39.724 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.229 seconds (JVM running for 6.63)
+00:52:41.471 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:52:41.471 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+00:52:41.474 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+00:52:41.779 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:52:41.779 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:52:41.789 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:52:41.790 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:52:41.800 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:52:41.800 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:53:06.320 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+00:53:06.322 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:53:06.325 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:53:09.219 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 8496 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+00:53:09.223 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+00:53:10.312 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:53:10.402 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+00:53:11.348 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+00:53:11.360 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:53:11.361 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:53:11.361 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+00:53:11.445 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:53:11.445 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2157 ms
+00:53:11.902 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:53:12.159 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:53:12.235 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+00:53:12.318 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+00:53:12.614 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+00:53:12.792 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+00:53:13.618 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+00:53:13.630 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:53:14.420 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:53:15.517 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+00:53:15.544 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:53:15.571 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+00:53:15.585 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.957 seconds (JVM running for 7.426)
+00:56:21.953 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:56:21.954 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+00:56:21.955 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+00:56:22.357 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:56:22.357 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:56:22.368 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:56:22.368 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:56:22.379 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:56:22.379 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+00:58:04.167 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s7ms671µs100ns).
+00:58:06.946 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+00:58:06.947 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+00:58:06.951 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+00:58:06.951 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+00:58:06.956 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+00:58:06.956 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:00:14.286 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m16s913ms420µs800ns).
+01:00:14.607 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:00:14.609 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:00:14.618 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:00:18.725 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 10084 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:00:18.729 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:00:19.936 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:00:20.045 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 8 JPA repository interfaces.
+01:00:21.080 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:00:21.090 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:00:21.091 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:00:21.091 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:00:21.174 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:00:21.174 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2383 ms
+01:00:21.608 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:00:21.812 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:00:21.867 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:00:21.922 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:00:22.161 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:00:22.324 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:00:23.070 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:00:23.081 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:00:23.804 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:00:24.815 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:00:24.844 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:00:24.871 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:00:24.884 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.757 seconds (JVM running for 7.318)
+01:00:27.765 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:00:27.765 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:00:27.766 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+01:00:28.204 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:00:28.205 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:00:28.215 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:00:28.216 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:00:28.227 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:00:28.228 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:01:25.695 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m848ms315µs500ns).
+01:03:40.408 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m17s638ms686µs400ns).
+01:03:40.718 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:03:40.720 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:03:40.731 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:03:44.980 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 9864 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:03:44.984 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:03:46.222 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:03:46.346 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 8 JPA repository interfaces.
+01:03:47.503 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:03:47.513 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:03:47.514 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:03:47.514 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:03:47.597 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:03:47.597 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2545 ms
+01:03:48.123 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:03:48.389 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:03:48.463 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:03:48.538 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:03:48.863 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:03:49.042 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:03:49.911 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:03:49.922 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:03:50.986 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:03:52.103 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:03:52.136 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:03:52.164 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:03:52.181 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 7.791 seconds (JVM running for 8.328)
+01:03:54.336 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:03:54.337 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:03:54.339 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+01:03:54.742 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:03:54.742 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:03:54.752 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:03:54.753 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:03:54.763 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:03:54.763 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:06:30.043 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:06:30.045 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m41s542ms664µs600ns).
+01:06:30.379 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:06:30.381 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:06:30.390 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:06:33.975 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 19280 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:06:33.978 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:06:35.015 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:06:35.095 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+01:06:36.030 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:06:36.040 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:06:36.041 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:06:36.042 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:06:36.154 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:06:36.154 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2124 ms
+01:06:36.662 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:06:36.856 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:06:36.927 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:06:37.038 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:06:37.265 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:06:37.399 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:06:38.039 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:06:38.048 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:06:38.778 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:06:39.731 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:06:39.754 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:06:39.775 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:06:39.788 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.269 seconds (JVM running for 6.67)
+01:06:43.047 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:06:43.047 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:06:43.048 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+01:06:43.367 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film title is processed.
+01:06:43.397 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Store is being processed.
+01:06:43.405 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Staff email is processed.
+01:06:43.408 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Address is being processed
+01:06:43.481 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer was processed
+01:06:43.481 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer table was updated.
+01:06:43.493 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Added new inventory
+01:06:43.493 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Processing rental
+01:06:43.505 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Rental was processed
+01:07:13.947 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:07:13.947 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:07:13.951 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:07:13.951 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:07:13.958 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:07:13.958 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:07:13.963 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:07:26.836 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:07:26.838 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:07:26.841 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:07:29.613 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 17708 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:07:29.617 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:07:30.681 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:07:30.769 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 8 JPA repository interfaces.
+01:07:31.775 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:07:31.788 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:07:31.789 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:07:31.789 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:07:31.881 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:07:31.882 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2194 ms
+01:07:32.400 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:07:32.673 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:07:32.752 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:07:32.864 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:07:33.172 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:07:33.347 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:07:34.088 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:07:34.099 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:07:34.818 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:07:36.055 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:07:36.089 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:07:36.116 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:07:36.132 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 7.119 seconds (JVM running for 7.591)
+01:07:39.809 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:07:39.809 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:07:39.811 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+01:07:40.143 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:07:40.143 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:07:40.152 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:07:40.153 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:07:40.163 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:07:40.163 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:17:57.995 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:17:57.996 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m25s209ms875µs400ns).
+01:17:58.301 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:17:58.303 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:17:58.312 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:18:02.404 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 7172 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:18:02.408 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:18:03.503 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:18:03.594 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+01:18:04.519 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:18:04.529 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:18:04.530 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:18:04.530 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:18:04.612 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:18:04.612 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2139 ms
+01:18:05.066 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:18:05.333 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:18:05.409 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:18:05.513 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:18:05.784 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:18:05.959 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:18:06.683 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:18:06.695 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:18:07.453 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:18:08.533 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:18:08.561 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:18:08.584 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:18:08.599 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.798 seconds (JVM running for 7.325)
+01:18:09.942 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:18:09.942 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:18:09.944 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+01:18:10.341 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film title is processed.
+01:18:10.357 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Store is being processed.
+01:18:10.365 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Staff email is processed.
+01:18:10.368 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Address is being processed
+01:18:10.374 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer table was updated.
+01:18:10.454 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Added new inventory
+01:18:10.455 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Processing rental
+01:18:10.465 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental was processed
+01:18:22.168 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:18:22.169 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:18:22.172 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:18:22.173 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:18:22.183 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:18:22.183 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:18:41.936 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:18:52.971 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Payment is processing.
+01:19:13.390 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23514
+01:19:13.391 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: no partition of relation "payment" found for row
+  Detail: Partition key of the failing row contains (payment_date) = (2022-02-03 01:18:52.972-05).
+01:19:13.393 [http-nio-8080-exec-3] INFO  o.h.e.j.b.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+01:22:00.792 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m47s448ms628µs500ns).
+01:22:01.143 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:22:01.146 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:22:01.154 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:22:03.690 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 21368 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:22:03.693 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:22:04.764 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:22:04.847 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 8 JPA repository interfaces.
+01:22:05.763 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:22:05.773 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:22:05.774 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:22:05.774 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:22:05.855 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:22:05.856 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2092 ms
+01:22:06.271 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:22:06.490 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:22:06.551 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:22:06.620 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:22:06.916 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:22:07.103 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:22:07.812 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:22:07.828 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:22:08.547 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:22:09.613 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:22:09.638 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:22:09.662 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:22:09.677 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.575 seconds (JVM running for 7.077)
+01:22:12.012 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:22:12.013 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:22:12.014 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+01:22:12.344 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:22:12.344 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:22:12.353 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:22:12.353 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:22:12.365 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:22:12.365 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:22:19.192 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:22:56.196 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Payment is processing.
+01:23:28.394 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23514
+01:23:28.395 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: no partition of relation "payment" found for row
+  Detail: Partition key of the failing row contains (payment_date) = (2022-02-03 01:23:01.077-05).
+01:23:28.398 [http-nio-8080-exec-2] INFO  o.h.e.j.b.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+01:23:39.078 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:23:39.080 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:23:39.086 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:23:46.984 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 2472 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:23:46.987 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:23:48.157 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:23:48.226 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 8 JPA repository interfaces.
+01:23:49.187 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:23:49.200 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:23:49.201 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:23:49.201 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:23:49.298 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:23:49.298 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2242 ms
+01:23:49.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:23:49.936 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:23:49.990 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:23:50.039 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:23:50.233 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:23:50.386 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:23:51.015 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:23:51.025 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:23:51.777 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:23:52.708 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:23:52.730 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:23:52.751 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:23:52.763 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.293 seconds (JVM running for 6.689)
+01:23:53.825 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:23:53.825 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:23:53.826 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+01:23:54.101 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:23:54.101 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:23:54.111 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:23:54.112 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:23:54.122 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:23:54.123 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:23:54.128 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:23:54.129 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Payment is processing.
+01:23:54.181 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23514
+01:23:54.182 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: no partition of relation "payment" found for row
+  Detail: Partition key of the failing row contains (payment_date) = (2022-02-03 01:23:54.132-05).
+01:23:54.182 [http-nio-8080-exec-1] INFO  o.h.e.j.b.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+01:25:33.120 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:25:33.122 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:25:33.128 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:25:38.285 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 7536 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:25:38.288 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:25:39.357 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:25:39.433 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+01:25:40.296 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:25:40.306 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:25:40.307 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:25:40.307 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:25:40.391 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:25:40.391 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2049 ms
+01:25:40.793 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:25:40.975 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:25:41.027 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:25:41.083 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:25:41.284 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:25:41.409 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:25:42.045 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:25:42.057 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:25:42.757 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:25:43.741 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:25:43.767 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:25:43.787 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:25:43.800 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 5.952 seconds (JVM running for 6.336)
+01:25:45.584 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:25:45.585 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:25:45.586 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+01:25:45.884 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:25:45.884 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:25:45.893 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:25:45.893 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:25:45.902 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:25:45.903 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:25:45.908 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:25:45.965 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental was updated
+01:37:52.356 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+01:37:52.359 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+01:37:52.364 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+01:37:56.659 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 21024 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+01:37:56.663 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+01:37:57.798 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:37:57.884 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 8 JPA repository interfaces.
+01:37:58.839 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+01:37:58.849 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+01:37:58.850 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+01:37:58.850 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+01:37:58.943 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+01:37:58.943 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2213 ms
+01:37:59.393 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:37:59.601 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:37:59.656 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:37:59.729 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+01:37:59.979 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01:38:00.148 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01:38:00.891 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:38:00.904 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:38:01.702 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:38:02.621 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+01:38:02.647 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+01:38:02.670 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+01:38:02.683 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.573 seconds (JVM running for 7.053)
+01:38:25.058 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:38:25.059 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+01:38:25.060 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+01:38:25.362 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film title is processed.
+01:38:25.376 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Store is being processed.
+01:38:25.381 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Staff email is processed.
+01:38:25.384 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Address is being processed
+01:38:25.445 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was processed
+01:38:25.446 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer table was updated.
+01:38:25.454 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Added new inventory
+01:38:25.455 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Processing rental
+01:38:25.464 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental was processed
+01:39:18.087 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+01:39:18.087 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+01:39:18.091 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+01:39:18.091 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+01:39:18.100 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+01:39:18.100 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+01:39:18.104 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+01:39:18.116 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Rental was updated
+02:00:34.447 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+02:00:34.448 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+02:00:34.453 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+02:00:39.939 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 16820 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+02:00:39.942 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+02:00:41.124 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:00:41.199 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 8 JPA repository interfaces.
+02:00:42.176 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+02:00:42.187 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+02:00:42.188 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+02:00:42.188 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+02:00:42.274 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+02:00:42.274 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2274 ms
+02:00:42.699 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+02:00:42.889 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+02:00:42.944 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:00:42.993 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+02:00:43.173 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+02:00:43.326 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+02:00:43.956 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:00:43.965 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:00:43.975 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dvdController': Unsatisfied dependency expressed through field 'rentalService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'dvdrental.sifat.domain.service.RentalService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+02:00:43.975 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+02:00:43.979 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+02:00:43.984 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+02:00:43.988 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+02:00:44.002 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+02:00:44.040 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field rentalService in dvdrental.sifat.controller.DvdController required a bean of type 'dvdrental.sifat.domain.service.RentalService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'dvdrental.sifat.domain.service.RentalService' in your configuration.
+
+02:01:11.399 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 6580 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+02:01:11.402 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+02:01:12.503 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:01:12.585 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 8 JPA repository interfaces.
+02:01:13.493 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+02:01:13.503 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+02:01:13.504 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+02:01:13.504 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+02:01:13.595 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+02:01:13.595 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2138 ms
+02:01:14.062 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+02:01:14.272 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+02:01:14.330 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:01:14.399 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+02:01:14.627 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+02:01:14.759 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+02:01:15.394 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:01:15.406 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:01:16.090 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:01:17.136 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+02:01:17.156 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+02:01:17.176 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+02:01:17.189 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.244 seconds (JVM running for 6.633)
+02:01:30.157 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:01:30.158 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+02:01:30.161 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+02:01:30.434 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film title is processed.
+02:01:30.446 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Store is being processed.
+02:01:30.452 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Staff email is processed.
+02:01:30.455 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Address is being processed
+02:01:30.525 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was processed
+02:01:30.525 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer table was updated.
+02:01:30.536 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Added new inventory
+02:01:30.536 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Processing rental
+02:01:30.547 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental was processed
+02:04:52.070 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+02:04:52.071 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+02:04:52.076 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+02:04:57.613 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 6704 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+02:04:57.615 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+02:04:58.871 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:04:58.979 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 8 JPA repository interfaces.
+02:04:59.927 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+02:04:59.936 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+02:04:59.937 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+02:04:59.937 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+02:05:00.015 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+02:05:00.015 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2340 ms
+02:05:00.416 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+02:05:00.617 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+02:05:00.670 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:05:00.729 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+02:05:00.944 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+02:05:01.073 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+02:05:01.702 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:05:01.712 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:05:02.380 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:05:03.490 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+02:05:03.514 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+02:05:03.533 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+02:05:03.545 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.418 seconds (JVM running for 6.82)
+02:05:06.071 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:05:06.072 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+02:05:06.074 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+02:05:06.357 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film title is processed.
+02:05:06.372 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Store is being processed.
+02:05:06.378 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Staff email is processed.
+02:05:06.381 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Address is being processed
+02:05:06.457 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer was processed
+02:05:06.457 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer table was updated.
+02:05:06.468 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Added new inventory
+02:05:06.468 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Processing rental
+02:05:06.480 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Rental was processed
+02:10:42.796 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+02:10:42.796 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+02:10:42.801 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+02:10:42.801 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Customer was found.
+02:10:42.809 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+02:10:42.809 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
+02:10:42.814 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+02:10:42.836 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Rental was updated

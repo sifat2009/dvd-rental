@@ -19,7 +19,5 @@ public class ReturnValidator {
                 || isNullOrEmpty(ret.getFilm().getTitle())) {
             throw new DvdRentalException("Film title is required.");
         }
-        if (isNullOrEmpty(ret.getPayment().toString()))
-            throw new DvdRentalException("Payment is required");
     }
 }

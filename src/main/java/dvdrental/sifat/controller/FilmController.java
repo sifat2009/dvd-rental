@@ -15,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/dvd")
+@RequestMapping("/film")
 @Slf4j
 public class FilmController {
 
@@ -35,20 +35,6 @@ public class FilmController {
         logger.info("Response status is set");
         response.setResult(allFilms);
         logger.info("Request call result is set");
-
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
-    @PostMapping("/rent")
-    public ResponseEntity<?> RentDvd(@RequestBody RentRequest request) {
-
-        Response<?> response = filmService.rentADvd(request);
-
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
-    @PostMapping("/return")
-    public ResponseEntity<?> ReturnDvd(@RequestBody ReturnRequest request) {
-
-        Response<?> response = filmService.returnADvd(request);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

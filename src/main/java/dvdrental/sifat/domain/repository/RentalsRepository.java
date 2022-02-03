@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 public interface RentalsRepository extends CrudRepository<RentalsEntity,Long> {
 
-    RentalsEntity findByInventoryId(Long inventoryId);
+    RentalsEntity findByInventoryIdAndCustomerId(Long inventoryId, Long customerId);
     RentalsEntity findByCustomerIdAndRentalDate(Long customerId, LocalDateTime rentalDate);
 
 }
