@@ -782,3 +782,6 @@ Consider defining a bean of type 'dvdrental.sifat.domain.service.RentalService' 
 02:10:42.809 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Inventory was found.
 02:10:42.814 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
 02:10:42.836 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Rental was updated
+02:34:44.148 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+02:34:44.150 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+02:34:44.154 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
