@@ -1,10 +1,9 @@
 package dvdrental.domain.service;
 
-import dvdrental.domain.entity.*;
 import dvdrental.domain.repository.*;
+import dvdrental.domain.entity.*;
 import dvdrental.exception.DvdRentalException;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -14,7 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Optional;
 
 @ExtendWith(MockitoExtension.class)
-class RentalServiceTest {
+public class RentalServiceTest {
 
     @InjectMocks
     RentalServiceImpl rentalService = new RentalServiceImpl();
@@ -39,9 +38,13 @@ class RentalServiceTest {
 
     @Test
     public void responseIsNotNull() {
-
+        /*
+        Mockito.when(filmsRepository.findById(Mockito.anyLong())).thenReturn(getFilmEntities());
+        Mockito.when(customersRepository.findById(Mockito.anyLong())).thenReturn(getFilmEntities());
+        Mockito.when(addressesRepository.findById(Mockito.anyLong())).thenReturn(getFilmEntities());
+        Mockito.when(filmsRepository.findById(Mockito.anyLong())).thenReturn(getFilmEntities());
+         */
     }
-
     @Test
     public void responseIsNull() {
         //Mock repo to return empty
@@ -49,13 +52,9 @@ class RentalServiceTest {
         Mockito.when(customersRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
         Mockito.when(addressesRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
         Mockito.when(staffRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
-
-    /*
-        ResponseEntity response = rentalService.rentADvd(getFirstAndLastName(),getFilmById(),getStaffByEmail()
-        , getStoreByAddress());
-    */
+        Mockito.when(inventoriesRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
+        Mockito.when(rentalsRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
     }
-
     @Test
     public void unknownExceptionTest() {
         //Mock repo to throw Dvd-rental Exception and
@@ -71,40 +70,5 @@ class RentalServiceTest {
                 (getFirstAndLastName(),getFilmById(),getStaffByEmail()
                 , getStoreByAddress()));
          */
-    }
-
-    private Optional<CustomersEntity> getFirstAndLastName() {
-        CustomersEntity customersEntity = new CustomersEntity();
-        customersEntity.setFirstName("Johnny");
-        customersEntity.setLastName("Black");
-        customersEntity.setEmail("johnnyblack701@gmail.com");
-        AddressesEntity byAddressIgnoreCase = addressesRepository.findByAddressIgnoreCase("123 new lots");
-        customersEntity.setAddressId(byAddressIgnoreCase.getAddressId());
-        return Optional.of(customersEntity);
-    }
-
-    private Optional<AddressesEntity> getAddressById() {
-        AddressesEntity addressesEntity = new AddressesEntity();
-        addressesEntity.setAddress("134 Brooklyn street");
-        return Optional.of(addressesEntity);
-    }
-
-    private Optional<StaffEntity> getStaffByEmail() {
-        StaffEntity staffEntity = new StaffEntity();
-        staffEntity.setEmail("johnnyblack@gmail.com");
-        return Optional.of(staffEntity);
-    }
-
-    private Optional<FilmsEntity> getFilmById() {
-        FilmsEntity filmsEntity = new FilmsEntity();
-        filmsEntity.setTitle("New World");
-        return Optional.of(filmsEntity);
-    }
-
-    private Optional<StoresEntity> getStoreByAddress() {
-        StoresEntity storesEntity = new StoresEntity();
-        AddressesEntity byAddressIgnoreCase = addressesRepository.findByAddressIgnoreCase("123 lots ave");
-        storesEntity.setManagerStaffId(byAddressIgnoreCase.getAddressId());
-        return Optional.of(storesEntity);
     }
 }
