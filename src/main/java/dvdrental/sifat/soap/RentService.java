@@ -1,10 +1,12 @@
-package dvdrental.sifat.domain.service;
+package dvdrental.sifat.soap;
 
+import dvdrental.sifat.domain.dto.FilmResponse;
 import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.domain.dto.Response;
 import dvdrental.sifat.domain.dto.ResponseStatus;
 import dvdrental.sifat.domain.entity.*;
 import dvdrental.sifat.domain.repository.*;
+import dvdrental.sifat.domain.service.FilmServiceImpl;
 import dvdrental.sifat.exception.DvdRentalException;
 import dvdrental.sifat.validator.RentalValidator;
 import org.slf4j.Logger;
@@ -12,11 +14,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.jws.WebMethod;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
-public class RentalServiceImpl implements RentalService {
+@WebService(serviceName = "/RentService", targetNamespace = "localhost:8080")
+@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE, use = SOAPBinding.Use.LITERAL)
+public class RentService {
 
     private final Logger logger = LoggerFactory.getLogger(FilmServiceImpl.class);
     @Autowired
@@ -43,7 +53,8 @@ public class RentalServiceImpl implements RentalService {
     @Autowired
     private RentalValidator rentalValidator;
 
-    @Override
+    @WebMethod(operationName = "Rent")
+    @WebResult(name = "RentADvd")
     public Response<?> rentADvd(RentRequest rent) {
         try {
 

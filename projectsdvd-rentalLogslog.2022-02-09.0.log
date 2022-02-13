@@ -1,0 +1,513 @@
+20:33:20.853 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 21932 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+20:33:20.857 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+20:33:22.223 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:33:22.315 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 8 JPA repository interfaces.
+20:33:23.303 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:33:23.315 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:33:23.316 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:33:23.316 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+20:33:23.406 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:33:23.406 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2476 ms
+20:33:23.880 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:33:24.191 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:33:24.249 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:33:24.330 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+20:33:24.594 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:33:24.769 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+20:33:25.539 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:33:25.550 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:33:26.196 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dvdController': Unsatisfied dependency expressed through field 'rentalService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rentalServiceImpl': Unsatisfied dependency expressed through field 'rentalsRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rentalsRepository' defined in dvdrental.sifat.domain.repository.RentalsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! Reason: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!
+20:33:26.197 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:33:26.200 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:33:26.212 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:33:26.216 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:33:26.233 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:33:26.261 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dvdController': Unsatisfied dependency expressed through field 'rentalService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rentalServiceImpl': Unsatisfied dependency expressed through field 'rentalsRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rentalsRepository' defined in dvdrental.sifat.domain.repository.RentalsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! Reason: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at dvdrental.sifat.DvdRentalApplication.main(DvdRentalApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rentalServiceImpl': Unsatisfied dependency expressed through field 'rentalsRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rentalsRepository' defined in dvdrental.sifat.domain.repository.RentalsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! Reason: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rentalsRepository' defined in dvdrental.sifat.domain.repository.RentalsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! Reason: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 34 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! Reason: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1051)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:364)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract dvdrental.sifat.domain.entity.RentalsEntity dvdrental.sifat.domain.repository.RentalsRepository.findByInventoryIdOrderByLastUpdateDescAndCustomerId(java.lang.Long,java.lang.Long)! No property andCustomerId found for type RentalsEntity!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:113)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:87)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 66 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property andCustomerId found for type RentalsEntity!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.OrderBySource.lambda$createOrder$2(OrderBySource.java:112)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.query.parser.OrderBySource.createOrder(OrderBySource.java:110)
+	at org.springframework.data.repository.query.parser.OrderBySource.<init>(OrderBySource.java:94)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:386)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 70 common frames omitted
+20:37:09.660 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 16496 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+20:37:09.663 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+20:37:10.739 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:37:10.819 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+20:37:11.763 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:37:11.773 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:37:11.774 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:37:11.774 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+20:37:11.859 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:37:11.859 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2140 ms
+20:37:12.281 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:37:12.482 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:37:12.534 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:37:12.586 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+20:37:12.790 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:37:12.927 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+20:37:13.598 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:37:13.607 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:37:14.327 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:37:15.402 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+20:37:15.427 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:37:15.451 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:37:15.468 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.293 seconds (JVM running for 6.737)
+20:38:43.219 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:38:43.220 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:38:43.221 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:38:43.602 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+20:38:43.603 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+20:38:43.616 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+20:38:43.616 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid.
+20:38:43.633 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+20:38:43.633 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.
+20:38:43.644 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+20:39:23.052 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:39:23.054 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:39:23.060 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:39:28.598 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 18012 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+20:39:28.602 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+20:39:29.714 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:39:29.807 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 8 JPA repository interfaces.
+20:39:30.809 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:39:30.820 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:39:30.821 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:39:30.821 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+20:39:30.910 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:39:30.910 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2252 ms
+20:39:31.393 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:39:31.616 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:39:31.673 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:39:31.733 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+20:39:32.002 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:39:32.179 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+20:39:32.957 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:39:32.971 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:39:33.803 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:39:34.895 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+20:39:34.928 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:39:34.956 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:39:34.972 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.97 seconds (JVM running for 8.249)
+20:39:38.387 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:39:38.387 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:39:38.388 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:39:38.790 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+20:39:38.791 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed.
+20:39:38.803 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+20:39:38.803 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid.
+20:40:41.005 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed.
+20:40:46.941 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.
+20:51:23.968 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+20:51:23.968 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m42s963ms151µs300ns).
+20:51:24.324 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:51:24.326 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:51:24.340 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:51:28.556 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 21672 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+20:51:28.560 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+20:51:29.719 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:51:29.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 8 JPA repository interfaces.
+20:51:30.730 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:51:30.739 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:51:30.740 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:51:30.740 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+20:51:30.822 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:51:30.823 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2203 ms
+20:51:31.252 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:51:31.435 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:51:31.488 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:51:31.539 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+20:51:31.732 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:51:31.927 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+20:51:32.579 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:51:32.591 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:51:33.321 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:51:34.279 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+20:51:34.305 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:51:34.326 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:51:34.341 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.294 seconds (JVM running for 6.734)
+20:51:36.126 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:51:36.126 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:51:36.127 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:51:36.412 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+20:51:36.412 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+20:51:36.422 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+20:51:36.422 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 635
+20:51:36.433 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+20:51:36.433 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457)]
+20:51:36.440 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+20:55:55.017 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:55:55.019 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:55:55.024 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:55:59.665 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 3888 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+20:55:59.668 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+20:56:00.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:56:00.884 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 8 JPA repository interfaces.
+20:56:01.807 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:56:01.817 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:56:01.818 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:56:01.818 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+20:56:01.899 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:56:01.899 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2178 ms
+20:56:02.359 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:56:02.568 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:56:02.642 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:56:02.716 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+20:56:02.932 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:56:03.090 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+20:56:03.762 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:56:03.772 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:56:04.514 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:56:05.562 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+20:56:05.590 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:56:05.615 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:56:05.628 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.475 seconds (JVM running for 6.938)
+20:56:06.778 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:56:06.779 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:56:06.780 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+20:56:07.083 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film title is processed. FilmId: 30
+20:56:07.103 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Store is being processed.
+20:56:07.103 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Store was processed. StoreId: 1
+20:56:07.110 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Staff email is processed. StaffId: 2
+20:56:07.115 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Address is being processed
+20:56:07.185 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Address table was updated.
+20:56:07.201 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer was processed. CustomerId: 636
+20:56:07.201 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer table was updated.
+20:56:07.201 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Address was processed. AddressId: 626
+20:56:07.213 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Added new inventory. InventoryId: 4678
+20:56:07.213 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Processing rental
+20:56:07.226 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental was processed. RentalId: 16149
+20:56:21.429 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+20:56:21.429 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+20:56:21.435 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+20:56:21.436 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 636
+20:56:21.445 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+20:56:21.446 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457), InventoriesEntity(inventoryId=4678, filmId=30, storeId=1, lastUpdate=2022-02-09T20:56:07.201)]
+20:56:21.452 [http-nio-8080-exec-3] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+21:01:33.560 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:01:33.562 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:01:33.569 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:01:38.426 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 6372 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+21:01:38.432 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+21:01:39.601 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:01:39.701 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 8 JPA repository interfaces.
+21:01:40.715 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:01:40.727 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:01:40.728 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:01:40.728 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21:01:40.821 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:01:40.821 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2322 ms
+21:01:41.342 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:01:41.544 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:01:41.605 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:01:41.673 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+21:01:41.949 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:01:42.142 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:01:42.919 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:01:42.931 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:01:43.768 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:01:45.225 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+21:01:45.253 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:01:45.279 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:01:45.293 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 7.511 seconds (JVM running for 8.025)
+21:01:46.736 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:01:46.736 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:01:46.737 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+21:01:47.113 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+21:01:47.113 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+21:01:47.124 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+21:01:47.124 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 636
+21:01:50.780 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+21:01:51.951 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457), InventoriesEntity(inventoryId=4678, filmId=30, storeId=1, lastUpdate=2022-02-09T20:56:07.201)]
+21:02:01.297 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+21:02:10.913 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental was updated
+21:02:11.168 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:02:11.171 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:02:11.189 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:03:10.695 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 19972 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+21:03:10.698 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+21:03:11.943 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:03:12.026 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 8 JPA repository interfaces.
+21:03:13.078 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:03:13.091 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:03:13.091 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:03:13.092 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21:03:13.195 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:03:13.195 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2441 ms
+21:03:13.634 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:03:13.851 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:03:13.904 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:03:13.960 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+21:03:14.194 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:03:14.361 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:03:15.088 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:03:15.099 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:03:15.873 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:03:16.928 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+21:03:16.956 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:03:16.981 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:03:16.994 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.798 seconds (JVM running for 7.23)
+21:03:20.304 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:03:20.305 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:03:20.306 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+21:03:20.691 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+21:03:20.692 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+21:03:20.704 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+21:03:20.704 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 636
+21:03:20.716 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+21:03:20.716 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457), InventoriesEntity(inventoryId=4678, filmId=30, storeId=1, lastUpdate=2022-02-09T20:56:07.201)]
+21:03:36.476 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:03:36.478 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:03:36.486 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:03:39.526 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 300 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+21:03:39.530 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+21:03:40.662 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:03:40.755 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 8 JPA repository interfaces.
+21:03:41.736 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:03:41.748 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:03:41.749 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:03:41.749 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21:03:41.838 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:03:41.839 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2241 ms
+21:03:42.314 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:03:42.548 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:03:42.612 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:03:42.683 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+21:03:42.916 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:03:43.078 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:03:43.848 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:03:43.860 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:03:44.664 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:03:46.029 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+21:03:46.059 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:03:46.092 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:03:46.110 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 7.216 seconds (JVM running for 7.736)
+21:03:47.212 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:03:47.212 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:03:47.214 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+21:03:47.598 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+21:03:47.598 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+21:03:47.608 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+21:03:47.608 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 636
+21:03:51.080 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+21:03:52.372 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457), InventoriesEntity(inventoryId=4678, filmId=30, storeId=1, lastUpdate=2022-02-09T20:56:07.201)]
+21:06:18.846 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s194ms200µs900ns).
+21:06:19.181 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:06:19.183 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:06:19.193 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:06:24.282 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 2056 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+21:06:24.286 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+21:06:25.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:06:25.518 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 8 JPA repository interfaces.
+21:06:26.681 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:06:26.692 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:06:26.693 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:06:26.693 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21:06:26.787 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:06:26.787 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2432 ms
+21:06:27.268 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:06:27.507 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:06:27.572 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:06:27.647 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+21:06:27.908 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:06:28.080 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:06:28.907 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:06:28.919 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:06:29.750 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:06:30.864 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+21:06:30.904 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:06:30.937 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:06:30.953 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 7.323 seconds (JVM running for 7.886)
+21:06:33.242 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:06:33.243 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:06:33.246 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+21:06:33.621 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+21:06:33.621 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+21:06:33.632 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+21:06:33.632 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 636
+21:06:37.046 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+21:06:54.622 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=4678, filmId=30, storeId=1, lastUpdate=2022-02-09T20:56:07.201), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17)]
+21:07:04.069 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+21:07:45.326 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:07:45.328 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:07:45.336 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:08:20.218 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 13676 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+21:08:20.221 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+21:08:21.327 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:08:21.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 8 JPA repository interfaces.
+21:08:22.385 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:08:22.394 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:08:22.395 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:08:22.395 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21:08:22.489 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:08:22.489 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2209 ms
+21:08:22.935 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:08:23.202 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:08:23.256 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:08:23.312 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+21:08:23.513 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:08:23.646 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:08:24.345 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:08:24.357 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:08:25.093 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:08:26.140 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+21:08:26.168 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:08:26.191 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:08:26.205 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.484 seconds (JVM running for 6.909)
+21:08:27.298 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:08:27.298 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:08:27.300 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+21:08:27.618 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+21:08:27.619 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+21:08:27.627 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+21:08:27.627 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 636
+21:08:27.641 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+21:08:27.641 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=4678, filmId=30, storeId=1, lastUpdate=2022-02-09T20:56:07.201), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17)]
+21:08:27.647 [http-nio-8080-exec-2] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+21:10:43.298 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:10:43.300 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:10:43.307 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:10:47.758 [main] INFO  dvdrental.sifat.DvdRentalApplication - Starting DvdRentalApplication using Java 1.8.0_312 on DESKTOP-4MMNJQG with PID 2780 (C:\projects\dvd-rental\target\classes started by sifat_d0xms1s in C:\projects\dvd-rental)
+21:10:47.760 [main] INFO  dvdrental.sifat.DvdRentalApplication - No active profile set, falling back to default profiles: default
+21:10:48.896 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:10:48.978 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 8 JPA repository interfaces.
+21:10:49.907 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:10:49.918 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:10:49.919 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:10:49.919 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21:10:50.000 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:10:50.001 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2189 ms
+21:10:50.417 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:10:50.607 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:10:50.657 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:10:50.708 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+21:10:50.951 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:10:51.091 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:10:51.850 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:10:51.862 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:10:52.837 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:10:53.839 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+21:10:53.867 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:10:53.890 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:10:53.903 [main] INFO  dvdrental.sifat.DvdRentalApplication - Started DvdRentalApplication in 6.671 seconds (JVM running for 7.147)
+21:11:12.226 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:11:12.227 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:11:12.229 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+21:11:12.556 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Film title is processed. FilmId: 30
+21:11:12.570 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Store is being processed.
+21:11:12.570 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Store was processed. StoreId: 1
+21:11:12.577 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Staff email is processed. StaffId: 2
+21:11:12.580 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Address is being processed
+21:11:12.646 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer was processed. CustomerId: 637
+21:11:12.647 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Customer table was updated.
+21:11:12.647 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Address was processed. AddressId: 626
+21:11:12.658 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Added new inventory. InventoryId: 4679
+21:11:12.658 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Processing rental
+21:11:12.669 [http-nio-8080-exec-1] INFO  d.s.domain.service.FilmServiceImpl - Rental was processed. RentalId: 16150
+21:12:18.017 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Film is being processed.
+21:12:18.017 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Film table was processed. FilmId: 30
+21:12:18.022 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Customer is being processed.
+21:12:18.023 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Customer is valid. CustomerId: 637
+21:12:18.033 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Inventory is being processed
+21:12:18.033 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Inventory exists.InventoriesId are [InventoriesEntity(inventoryId=4679, filmId=30, storeId=1, lastUpdate=2022-02-09T21:11:12.647), InventoriesEntity(inventoryId=4678, filmId=30, storeId=1, lastUpdate=2022-02-09T20:56:07.201), InventoriesEntity(inventoryId=4677, filmId=30, storeId=1, lastUpdate=2022-02-03T02:05:06.457), InventoriesEntity(inventoryId=4676, filmId=30, storeId=1, lastUpdate=2022-02-03T02:01:30.525), InventoriesEntity(inventoryId=4675, filmId=30, storeId=1, lastUpdate=2022-02-03T01:38:25.446), InventoriesEntity(inventoryId=4674, filmId=30, storeId=1, lastUpdate=2022-02-03T01:18:10.379), InventoriesEntity(inventoryId=4673, filmId=30, storeId=1, lastUpdate=2022-02-03T01:06:43.481), InventoriesEntity(inventoryId=4672, filmId=30, storeId=1, lastUpdate=2022-01-30T20:56:43.062), InventoriesEntity(inventoryId=4671, filmId=30, storeId=1, lastUpdate=2022-01-30T20:52:51.254), InventoriesEntity(inventoryId=4670, filmId=30, storeId=1, lastUpdate=2022-01-30T20:49:48.902), InventoriesEntity(inventoryId=4669, filmId=30, storeId=1, lastUpdate=2022-01-30T20:38:00.476), InventoriesEntity(inventoryId=4668, filmId=30, storeId=1, lastUpdate=2022-01-30T20:29:29.544), InventoriesEntity(inventoryId=4667, filmId=30, storeId=1, lastUpdate=2022-01-30T20:12:30.330), InventoriesEntity(inventoryId=4666, filmId=30, storeId=1, lastUpdate=2022-01-30T20:11:34.917), InventoriesEntity(inventoryId=4665, filmId=30, storeId=1, lastUpdate=2022-01-30T20:09:45.109), InventoriesEntity(inventoryId=4664, filmId=30, storeId=1, lastUpdate=2022-01-30T20:06:53.719), InventoriesEntity(inventoryId=4663, filmId=30, storeId=1, lastUpdate=2022-01-30T19:57:50.228), InventoriesEntity(inventoryId=4662, filmId=30, storeId=1, lastUpdate=2022-01-30T19:56:49.677), InventoriesEntity(inventoryId=4661, filmId=30, storeId=1, lastUpdate=2022-01-30T19:36:39.626), InventoriesEntity(inventoryId=4660, filmId=30, storeId=1, lastUpdate=2022-01-30T19:33:50.410), InventoriesEntity(inventoryId=4659, filmId=30, storeId=1, lastUpdate=2022-01-30T19:23:01.808), InventoriesEntity(inventoryId=145, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17), InventoriesEntity(inventoryId=144, filmId=30, storeId=1, lastUpdate=2020-02-15T05:09:17)]
+21:12:18.038 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Rental is being processed.
+21:12:18.053 [http-nio-8080-exec-5] INFO  d.s.domain.service.FilmServiceImpl - Rental was updated. RentalId: 16150
+22:04:51.303 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22:04:51.306 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22:04:51.319 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

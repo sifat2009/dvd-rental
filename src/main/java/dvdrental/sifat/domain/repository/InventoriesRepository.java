@@ -11,7 +11,9 @@ public interface InventoriesRepository extends CrudRepository<InventoriesEntity,
 
     InventoriesEntity findByLastUpdate(LocalDateTime lastUpdate);
 
-     List<InventoriesEntity> findAllByFilmIdAndStoreId(Long filmId, Long storeId);
+    InventoriesRepository findByInventoryId(Long inventoryId);
+
+    List<InventoriesEntity> findAllByFilmIdAndStoreIdOrderByLastUpdateDesc(Long filmId, Long storeId);
 
 
 }

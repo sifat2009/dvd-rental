@@ -58,7 +58,7 @@ public class ReturnServiceImpl implements ReturnService {
         if (filmsEntity == null) {
             throw new DvdRentalException(" Please enter a valid film title");
         }
-        logger.info("Film table was processed.");
+        logger.info("Film table was processed. FilmId: " + filmsEntity.getFilmId());
         CustomersEntity customer = customersRepository
                 .findByFirstNameAndLastNameIgnoreCase
                         (returnRequest.getCustomer().getFirstName()
@@ -68,19 +68,21 @@ public class ReturnServiceImpl implements ReturnService {
         if (customer == null) {
             throw new DvdRentalException(" Please provide valid name.");
         }
-        logger.info("Customer is valid.");
+        logger.info("Customer is valid. CustomerId: " + customer.getCustomerId());
 
         List<InventoriesEntity> inventoriesEntity = inventoriesRepository
-                .findAllByFilmIdAndStoreId(filmsEntity.getFilmId(), customer.getStoreId());
-        logger.info("Inventory is being processed.");
+                .findAllByFilmIdAndStoreIdOrderByLastUpdateDesc(filmsEntity.getFilmId(), customer.getStoreId());
+        logger.info("Inventory is being processed");
 
         if (inventoriesEntity == null) {
             throw new DvdRentalException(" Please contact customer service.");
         }
-        logger.info("Inventory exists.");
+        logger.info("Inventory exists.InventoriesId are "
+                + inventoriesEntity);
+
         RentalsEntity rentalsEntity = rentalsRepository
                 .findByInventoryIdAndCustomerId
-                        (inventoriesEntity.get(inventoriesEntity.size() - 1).getInventoryId(), customer.getCustomerId());
+                        (inventoriesEntity.get(0).getInventoryId(), customer.getCustomerId());
         logger.info("Rental is being processed.");
 
         if (rentalsEntity == null) {
@@ -94,11 +96,11 @@ public class ReturnServiceImpl implements ReturnService {
         if (rentalsEntity.getReturnDate() == null) {
             rentalsEntity.setReturnDate(LocalDateTime.now());
             rentalsEntity = rentalsRepository.save(rentalsEntity);
-            logger.info("Rental was updated");
+            logger.info("Rental was updated. RentalId: " + rentalsEntity.getRentalId());
+        } else {
+            throw new DvdRentalException("Please contact customer service.");
         }
-
-        return new Response<>(ResponseStatus.SUCCESS, returnRequest);
-
+        return new Response<>(ResponseStatus.SUCCESS, rentalsEntity);
     }
 
     private PaymentsEntities getPaymentsEntities(ReturnRequest returnRequest, Long customerId, RentalsEntity rentalsEntity) {
