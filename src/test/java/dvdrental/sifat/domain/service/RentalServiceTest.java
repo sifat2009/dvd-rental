@@ -1,5 +1,6 @@
 package dvdrental.sifat.domain.service;
 
+import dvdrental.sifat.domain.dto.RentRequest;
 import dvdrental.sifat.domain.entity.*;
 import dvdrental.sifat.domain.repository.*;
 import dvdrental.sifat.exception.DvdRentalException;
@@ -48,10 +49,41 @@ class RentalServiceTest {
     }
     @Test
     public void responseIsNull() {
+        //Mock repo to return empty
         Mockito.when(filmsRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
         Mockito.when(customersRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
         Mockito.when(addressesRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
         Mockito.when(staffRepository.findById(Mockito.anyLong())).thenReturn(Optional.empty());
+
+        CustomersEntity customersEntity = new CustomersEntity();
+        customersEntity.setFirstName("Sifat");
+        customersEntity.setLastName("Aman");
+        customersEntity.setEmail("AbrahamLincoln@gmail.com");
+        customersEntity.setActivebool(true);
+
+        AddressesEntity customerAddress = new AddressesEntity();
+        customerAddress.setAddress("111 fountain ave");
+        customerAddress.setCityId(5L);
+        customerAddress.setDistrict("brooklyn");
+        customerAddress.setPostalCode("11208");
+        customerAddress.setPhone("3470000000");
+
+        FilmsEntity filmsEntity = new FilmsEntity();
+        filmsEntity.setFilmId(30L);
+
+        StaffEntity staffEntity = new StaffEntity();
+        staffEntity.setEmail("Jon.Stephen@sakillastaff.com");
+
+        AddressesEntity storeAddress = new AddressesEntity();
+        storeAddress.setAddress("47 MySakilla Drive");
+        storeAddress.setCityId(300L);
+    /*
+        ResponseEntity response = rentalService.rentADvd().getResponseStatus();
+*/
+
+
+
+
 
     /*
         ResponseEntity response = rentalService.rentADvd(getFirstAndLastName(),getFilmById(),getStaffByEmail()
@@ -61,7 +93,7 @@ class RentalServiceTest {
 
     @Test
     public void unknownExceptionTest(){
-        Mockito.when((filmsRepository.findByFilmId(Mockito.anyLong()))).thenThrow(DvdRentalException.class);
+        Mockito.when((filmsRepository.findById(Mockito.anyLong()))).thenThrow(DvdRentalException.class);
         Mockito.when(staffRepository.findByEmailIgnoreCase
                 (Mockito.anyString())).thenThrow(DvdRentalException.class);
         Mockito.when(addressesRepository.findByAddressIgnoreCase(Mockito.anyString()))
