@@ -1,1 +1,6 @@
-C:\projects\dvd-rental\src\test\java\dvdrental\sifat\DvdRentalApplicationTests.java
+C:\projects\dvd-rental\src\test\java\dvdrental\domain\dto\RentRequestTest.java
+C:\projects\dvd-rental\src\test\java\dvdrental\DvdRentalApplicationTests.java
+C:\projects\dvd-rental\src\test\java\dvdrental\domain\service\integrationTests\FilmServiceIntegrationTest.java
+C:\projects\dvd-rental\src\test\java\dvdrental\domain\service\integrationTests\RentADvdIntegrationTest.java
+C:\projects\dvd-rental\src\test\java\dvdrental\domain\service\unittest\FilmServiceTest.java
+C:\projects\dvd-rental\src\test\java\dvdrental\domain\service\unittest\RentalServiceTest.java

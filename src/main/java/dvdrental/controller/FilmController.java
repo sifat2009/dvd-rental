@@ -36,4 +36,21 @@ public class FilmController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getFilmById(@PathVariable Long id) {
+        FilmsEntity film = filmService.getFilmById(id);
+        if (film == null) {
+            Response<String> response = new Response<>();
+            response.setResult("No Data Found");
+            response.setResponseStatus(ResponseStatus.WARNING);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }
+        //We have data.
+        Response<FilmsEntity> filmsEntityResponse = new Response<>();
+        filmsEntityResponse.setResult(film);
+        filmsEntityResponse.setResponseStatus(ResponseStatus.SUCCESS);
+
+        return new ResponseEntity<>(filmsEntityResponse, HttpStatus.OK);
+    }
 }

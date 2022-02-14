@@ -1,1 +1,6 @@
-dvdrental\sifat\DvdRentalApplicationTests.class
+dvdrental\domain\dto\RentRequestTest.class
+dvdrental\domain\service\unittest\RentalServiceTest.class
+dvdrental\domain\service\unittest\FilmServiceTest.class
+dvdrental\domain\service\integrationTests\FilmServiceIntegrationTest.class
+dvdrental\domain\service\integrationTests\RentADvdIntegrationTest.class
+dvdrental\DvdRentalApplicationTests.class

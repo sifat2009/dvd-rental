@@ -9,5 +9,10 @@ public interface FilmService {
      * @return all information from films tables.
      */
     Iterable <FilmsEntity> getAllFilms();
+    /**
+     * The get method will
+     * @return all information from films tables about specific film
+     */
+    FilmsEntity getFilmById(Long id);
 
 }

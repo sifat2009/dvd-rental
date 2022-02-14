@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class FilmServiceImpl implements FilmService {
 
@@ -22,6 +24,15 @@ public class FilmServiceImpl implements FilmService {
         logger.info("Iterable is utilized to find all films.");
         return all;
 
+    }
+
+    @Override
+    public FilmsEntity getFilmById(Long id) {
+        Optional<FilmsEntity> findById = filmsRepository.findById(id);
+        if(findById.isPresent()) {
+            return findById.get();
+        }
+        return null;
     }
 }
 

@@ -1,7 +1,8 @@
-package dvdrental.domain.service;
+package dvdrental.domain.service.unittest;
 
 import dvdrental.domain.repository.*;
 import dvdrental.domain.entity.*;
+import dvdrental.domain.service.RentalServiceImpl;
 import dvdrental.exception.DvdRentalException;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
